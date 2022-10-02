@@ -29,10 +29,10 @@ function App() {
   const [pickedCategory, setPickedCategory] = useState('')
   const [letters, setLetters] = useState([])
 
-  const [guessedLetters, setGuessedLetters] = useState([])
+  const [guessedLetters, setGuessedLetters] = useState([0])
   const [wrongLetters, setWrongLetters] = useState([])
   const [guesses, setGuesses] = useState(guessesQty)
-  const [score, setScore] = useState(50)
+  const [score, setScore] = useState(0)
 
   const pickWordAndCategory = useCallback (() => {
     //pick a random category
