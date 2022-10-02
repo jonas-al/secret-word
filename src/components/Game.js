@@ -27,9 +27,9 @@ const Game = ({
       <p className="points">
         <span>Potuação: {score}</span>
       </p>
-      <h1>Adivinhe a Palavra: </h1>
+      <h1>Secret Word</h1>
       <h3 className="tip">
-        Dica sobre a palavra: <span>{pickedCategory}</span>
+        Dica sobre a palavra: <span>{pickedCategory.charAt(0).toUpperCase() + pickedCategory.slice(1)}</span>
       </h3>
       <p>Você ainda tem {guesses} chances!</p>
       <div className="wordContainer">
@@ -56,12 +56,14 @@ const Game = ({
           <button>Jogar!</button>
         </form>
       </div>
-      <div className="wrondLetterContainer">
+      <div className="wrongLetterContainer">
         <p>Letras já utilizadas: </p>
-        {wrongLetters.map((letter, i) => (
-          <span key={i}>{letter}</span>
-        ))}
-      </div>
+          {wrongLetters.length > 0? wrongLetters.map((letter, i) => (
+            <div className='wrongLetter'>
+              <span key={i}>{letter}</span>
+            </div>
+          )): null}
+        </div>
     </div>
   )
 }

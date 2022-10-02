@@ -7,25 +7,27 @@
 }
 
 .tip span{
-    color: #ecfa00;
+    color: #ffefa9;
 }
 
 .wordContainer{
     margin: 1.5em;
     padding: 1.5em;
-    border: 20px solid #ecfa00;
+    /*border: 20px solid #8A8A8A;*/
     display: flex;
 }
 
 .letter, .blankSquare{
     font-size: 70px;
     line-height: 1.5;
-    border: 3px solid #000;
+    border: 3px solid #70656e;
+    border-radius: 10px;
+    margin: 0 3px;
     height: 100px;
     width: 100px;
     text-transform: uppercase;
-    background-color: white;
-    color: #000;
+    background-color: #30262f;
+    color: white;
     font-weight: bold;
 }
 
@@ -45,4 +47,25 @@
     font-size: 2em;
     text-align: center;
     margin-right: 1em;
+    border: none;
+    border-radius: 15px;
+}
+
+.wrongLetterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrongLetterContainer .wrongLetter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #70656e;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: #30262f;
+    color: white;
+    margin-left: 5px;
 }
